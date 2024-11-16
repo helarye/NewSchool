@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -21,12 +22,11 @@ namespace NewSchool.Pages.Enrollments
 
         public IActionResult OnGet()
         {
-        ViewData["CourseID"] = new SelectList(_context.Courses, "CourseID", "CourseID");
-        ViewData["StudentID"] = new SelectList(_context.Students, "ID", "LastName", "FirstMidName");
+        ViewData["CourseID"] = new SelectList(_context.Courses, "CourseID", "Title");
+        ViewData["StudentID"] = new SelectList(_context.Students, "ID", "LastName");
             return Page();
         }
-        //"LastName"&" "&"FirstMidName"
-        //FirstMidName
+        //LastName
         //Title
 
         [BindProperty]

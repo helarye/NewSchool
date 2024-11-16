@@ -24,7 +24,8 @@ namespace NewSchool.Pages.Courses
             return Page();
         }
 
-        [BindProperty]
+        [BindProperty]//תגית המבטיחה שהעמוד יעלה עבור מחלקה שקשורה אליו
+        //Cources במקרה שלנו
         public Course Course { get; set; } = default!;
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
