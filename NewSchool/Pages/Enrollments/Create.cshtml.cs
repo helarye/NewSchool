@@ -20,6 +20,7 @@ namespace NewSchool.Pages.Enrollments
             _context = context;
         }
 
+
         public IActionResult OnGet()
         {
         ViewData["CourseID"] = new SelectList(_context.Courses, "CourseID", "Title");
